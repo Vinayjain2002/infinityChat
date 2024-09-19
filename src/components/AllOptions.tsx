@@ -38,41 +38,43 @@ export const AllOptions = () => {
   return (
     <div className="w-full h-full py-5">
       <div className="flex flex-col justify-between items-center h-full">
-        <div className="w-[40px]">
-          <a href="/">
-            <img src={Logo} alt="Logo" />
-          </a>
-        </div>
-        <div className="flex flex-col justify-center items-center space-y-3">
-          {menuItems.map((item, index) => (
-            <a href={item.link}>
-              <div
-                key={index}
-                className="xl:w-[40px] lg:w-[35px] w-[30px] p-2 hover:rounded-md hover:bg-primaryLightColor relative"
-                onMouseOver={(event) => handleMouseOver(event, item)}
-                onMouseOut={handleMouseOut}
-              >
-                {item.icon && <img src={item.icon} alt={item.alt} />}
-                {popupVisible && popupMessage === item.alt && (
+        <div className="h-full">
+          <div className="flex flex-col justify-between items-center h-4/5  ">
+            <div className="w-[40px]">
+              <a href="/">
+                <img src={Logo} alt="Logo" />
+              </a>
+            </div>
+              {menuItems.map((item, index) => (
+                <a href={item.link}>
                   <div
-                    className="absolute bg-blue-400 text-white rounded-sm"
-                    style={{
-                      top: popupPosition.top,
-                      left: popupPosition.left,
-                      transform: "translateX(0)",
-                    }}
+                    key={index}
+                    className="xl:w-[42px] lg:w-[35px] w-[30px] p-2 hover:rounded-md hover:bg-primaryLightColor relative"
+                    onMouseOver={(event) => handleMouseOver(event, item)}
+                    onMouseOut={handleMouseOut}
                   >
-                    <div className="flex items-center p-1 rounded-md">
-                      <div className="" />
-                      <span className="">{popupMessage}</span>
-                    </div>
+                    {item.icon && <img src={item.icon} alt={item.alt} />}
+                    {popupVisible && popupMessage === item.alt && (
+                      <div
+                        className="absolute bg-blue-400 text-white rounded-b-lg rounded-r-md"
+                        style={{
+                          top: popupPosition.top,
+                          left: popupPosition.left,
+                          transform: "translateX(0)",
+                        }}
+                      >
+                        <div className="flex items-center px-2 py-1">
+                          <div className="" />
+                          <span className="">{popupMessage}</span>
+                        </div>
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
-            </a>
-          ))}
+                </a>
+              ))}
+          </div>
         </div>
-        <div className="flex flex-col space-y-5">
+        <div className="flex flex-col  justify-between space-y-5">
           <div className="xl:w-[28px] lg:w-[25px] w-[20px] ml-2 ">
             <img src={theme} alt="Theme" />
           </div>

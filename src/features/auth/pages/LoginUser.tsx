@@ -1,9 +1,6 @@
 import React, { HtmlHTMLAttributes, useState } from "react";
-import { Colors } from "../../../utils/constants/color";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-const logo = require("../../../assets/icons/logo.png");
-const illustration = require("../../../assets/images/chattingIllustration.jpg");
 
 export const LoginUser: React.FC = () => {
   const [emailCheck, setEmailCheck] = useState(true);
@@ -16,7 +13,7 @@ export const LoginUser: React.FC = () => {
 
   const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-    if (name == "email") {
+    if (name === "email") {
       setEmail(value);
     } else if (name === "password") {
       setPassword(value);
@@ -26,11 +23,11 @@ export const LoginUser: React.FC = () => {
   const submitForm = async (event: React.FormEvent<HTMLFormElement>) => {
     setIsLoading(true);
     try {
-      if (email == "") {
+      if (email === "") {
         setEmailCheck(false);
         setEmailError("Enter Email");
       }
-      if (password == "") {
+      if (password === "") {
         setPasswordCheck(false);
         setPasswordError("Enter Password");
       }
@@ -58,12 +55,12 @@ export const LoginUser: React.FC = () => {
     <div className="w-full bg-primaryLightColor min-h-screen">
       <ToastContainer />
       <div className="flex flex-row px-3">
-        <div className="w-full flex items-center justify-center">
+        <div className="lg:w-1/2 w-full flex items-center justify-center">
           {/* this is for the text Input */}
           <div className="flex w-full max-w-[400px] flex-col justify-center items-center lg:mt-0 min-h-screen py-5">
             <div className="flex w-full justify-center items-center">
               <div className="xl:w-[60px] lg:w-[50px] w-[50px]">
-                <img src={logo} alt="Logo of the Chat With Me" />
+                <img src="" alt="Logo of the Chat With Me" />
               </div>
               <p className="xl:text-2xl text-xl ml-2 font-bold">ConnectMe</p>
             </div>
@@ -170,13 +167,13 @@ export const LoginUser: React.FC = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="hidden lg:flex w-1/2">
           {/* this is for the image */}
-          <div className="hidden lg:flex max-w-1/2 w-full h-screen items-center justify-center">
+          <div className="w-full  items-center justify-center">
             <img
-              src={illustration}
+              src=""
               alt=""
-              className="max-w-full max-h-full w-full h-full object-cover"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>

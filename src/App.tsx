@@ -6,7 +6,6 @@ import { LoginUser } from "./features/auth/pages/LoginUser.tsx";
 import { PasswordReset } from "./features/auth/pages/PasswordReset.tsx";
 import { SignUpUser } from "./features/auth/pages/SignUpUser.tsx";
 import { Chatting } from "./features/chatting/pages/Chatting.tsx";
-import { HomeScreen } from "./features/homeScreen/pages/HomeScreen.tsx";
 import { AllTeams } from "./features/Teams/pages/AllTeams.tsx";
 import { CreateTeam } from "./features/Teams/pages/CreateTeam.tsx";
 import { ErrorPage } from "./features/Processing/pages/ErrorPage.tsx";
@@ -15,6 +14,7 @@ import { GetQrCode } from "./features/Friends/pages/GetQrCode.tsx";
 import { UploadPosts } from "./features/Post/pages/UploadPosts.tsx";
 import { AllPosts } from "./features/Post/pages/AllPosts.tsx";
 import { Setting } from "./features/account/pages/Setting.tsx";
+import { AllChats } from "./features/chatting/pages/AllChats.tsx";
 
 const App = () => {
   return (
@@ -27,7 +27,7 @@ const App = () => {
           <Route path="/user/signup" element={<SignUpUser />} />
           <Route path="/password/reset" element={<PasswordReset />} />
           <Route path="/chat" element={<Chatting />} />
-          <Route path="/" element={<HomeScreen />} />
+          <Route path="/chattAll" element={<AllChats />} />
           <Route path="/post/all" element={<AllPosts />} />
           <Route path="/post/upload" element={<UploadPosts />}/>
           <Route path="/qr/get" element={<GetQrCode />}  />

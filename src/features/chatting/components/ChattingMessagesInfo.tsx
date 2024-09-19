@@ -4,12 +4,13 @@ import searchIcon from "../../../assets/icons/svgIcon/searchIcon.svg";
 import threeDots from "../../../assets/icons/svgIcon/threeDots.svg";
 import infoIcon from "../../../assets/icons/svgIcon/info.svg";
 import { Messages } from "./Messages.tsx";
+import { ChatInput } from "./ChatInput.tsx";
 
 export const ChattingMessagesInfo = () => {
   return (
     <div className="w-full h-full h-screen bg-primaryLightColor">
-      <div className="w-full bg-white  px-8 py-3">
-        <div className="flex justify-between">
+      <div className="w-full sticky bg-white  px-8 h-[13vh]">
+        <div className="flex justify-between h-full items-center">
           <div className="flex space-x-4">
             <div className="w-[50px] h-[50px] ring-2 ring-blue-300 rounded-full overflow-hidden">
               <img src={personImage} alt="" className="object-cover" />
@@ -32,10 +33,20 @@ export const ChattingMessagesInfo = () => {
           </div>
         </div>
       </div>
-      <div>
-          <div className="ml-2 mt-1">
-              <Messages />
-          </div>
+      <div className="w-full h-[77vh] py-3 overflow-y-scroll">
+        <div className="ml-4 mt-2 flex flex-col space-y-3">
+          <Messages />
+          <Messages />
+          <Messages />
+
+          <Messages />
+          <Messages />
+          <Messages />
+          <Messages />
+        </div>
+      </div>
+      <div className="h-[10vh] w-full">
+          <ChatInput />
       </div>
     </div>
   );

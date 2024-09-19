@@ -1,6 +1,5 @@
 import React from 'react'
 import { AllOptions } from '../../../components/AllOptions.tsx'
-import ChattingIllustration from '../../../assets/images/chattingIllustration.jpg'
 import { ChattingUsers } from '../components/ChattingUsers.tsx'
 import { ChattingMessagesInfo} from '../components/ChattingMessagesInfo.tsx'
 export const Chatting = () => {

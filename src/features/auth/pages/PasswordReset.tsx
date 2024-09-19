@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const logo = require("../../../assets/icons/logo.png");
+// import  logo from "../../../assets/icons/logo.png";
 
 export const PasswordReset = () => {
   const [emailCheck, setEmailCheck] = useState(true);
@@ -10,7 +10,7 @@ export const PasswordReset = () => {
       <div className="w-1/2 max-w-[350px] oy-3">
         <div className="flex w-full justify-center items-center">
           <div className="xl:w-[60px] lg:w-[50px] w-[50px]">
-            <img src={logo} alt="Logo of the Chat With Me" />
+            <img src="" alt="Logo of the Chat With Me" />
           </div>
           <p className="xl:text-2xl text-xl ml-2 font-bold text-gray-700">Connect Me</p>
         </div>
